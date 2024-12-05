@@ -1,27 +1,68 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+// import NavBar from '@/components/NavBar.vue';
+// import { onMounted, onUnmounted, onUpdated, ref } from 'vue';
+import { onMounted, onUnmounted, onUpdated } from 'vue';
+import { RouterView } from 'vue-router';
+import { useAppStore } from './stores/appStore';
+import { watch } from 'vue';
+// import BernardRudofsky from './views/BernardRudofsky.vue';
+
+const appStore = useAppStore()
+
+watch(
+  () => appStore.darkMode,
+  (isDarkMode) => {
+    if (isDarkMode) {
+      document.body.classList.add('dark')
+    } else {
+      document.body.classList.remove('dark')
+    }
+  },
+  { immediate: true } // Trigger immediately to apply the initial state
+)
+
+
+// const message = ref('Welcome to the app!')
+
+onMounted(() => {
+  console.log('App has been mounted')
+})
+
+// const incrementCount = () => {
+//   appStore.increment()
+// }
+
+onMounted(() => {
+  console.log('App mounted!')
+})
+
+onUpdated(() => {
+  console.log('App updated!')
+})
+
+onUnmounted(() => {
+  console.log('App unmounted!')
+})
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
+  <div :class="{ dark: appStore.darkMode }">
+    <!-- <NavBar /> -->
+    <!-- <h1>{{ message }}</h1>
+    <button @click="incrementCount">Increment</button>
+    <p>Count from Pinia store: {{ appStore.doubleCount }}</p>
+    <BernardRudofsky message="Hello from the parent!" /> -->
+    
+  </div>
   <RouterView />
 </template>
 
 <style scoped>
-header {
+
+
+
+
+/* header {
   line-height: 1.5;
   max-height: 100vh;
 }
@@ -81,5 +122,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+} */
 </style>
