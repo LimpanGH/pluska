@@ -1,0 +1,7 @@
+{
+    "transactions": [
+      { "id": 1, "text": "Blommor", "amount": -199 },
+      { "id": 2, "text": "Lön", "amount": 58000 }
+    ]
+  }
+  
