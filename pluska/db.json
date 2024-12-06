@@ -1,14 +1,24 @@
 {
   "transactions": [
     {
-      "id": "2",
+      "id": "2dbcea62-c8ad-44cc-a815-c67310aa710f",
       "text": "Lön",
-      "amount": 58000
+      "amount": 45000
     },
     {
-      "id": "b8aad7b6-fccc-44d5-bd86-c6a206f5a03a",
-      "text": "asdf",
-      "amount": 2345
+      "id": "36ea199d-f5a2-49c2-b94d-ad47a316b618",
+      "text": "Julklapp till Bosse",
+      "amount": -350
+    },
+    {
+      "id": "a116bc7e-a503-42fb-926f-549fe01ace5b",
+      "text": "Amaryllis",
+      "amount": -240
+    },
+    {
+      "id": "dff718fa-9072-43ac-a923-d9552c3dbbd2",
+      "text": "Swish från Calle",
+      "amount": 150
     }
   ]
 }
