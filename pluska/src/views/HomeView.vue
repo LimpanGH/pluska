@@ -6,7 +6,6 @@ const redirectToPluskan = () => {
 
 <template>
   <main>
-    <!-- Hero Section -->
     <section class="hero">
       <div class="container">
         <h1 class="hero-title">Välkommen till Pluskan</h1>
@@ -18,8 +17,6 @@ const redirectToPluskan = () => {
         <button class="cta-button" @click="redirectToPluskan">Kom igång</button>
       </div>
     </section>
-
-    <!-- Features Section -->
     <section class="features">
       <div class="container">
         <h2 class="section-title">Huvudfunktioner</h2>
@@ -39,8 +36,6 @@ const redirectToPluskan = () => {
         </div>
       </div>
     </section>
-
-    <!-- Footer Section -->
     <footer class="footer">
       <div class="container">
         <p>&copy; 2024 Pluskan</p>
@@ -50,7 +45,6 @@ const redirectToPluskan = () => {
 </template>
 
 <style scoped>
-/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -63,7 +57,6 @@ body {
   color: #333;
 }
 
-/* Hero Section */
 .hero {
   background-color: #009688;
   color: white;
@@ -95,7 +88,6 @@ body {
   background-color: #f57c00;
 }
 
-/* Features Section */
 .features {
   padding: 40px 0;
   background-color: #ffffff;
@@ -133,7 +125,6 @@ body {
   color: #666;
 }
 
-/* Footer Section */
 .footer {
   background-color: #333;
   color: white;

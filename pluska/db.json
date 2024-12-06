@@ -1,7 +1,14 @@
 {
-    "transactions": [
-      { "id": 1, "text": "Blommor", "amount": -199 },
-      { "id": 2, "text": "Lön", "amount": 58000 }
-    ]
-  }
-  
+  "transactions": [
+    {
+      "id": "2",
+      "text": "Lön",
+      "amount": 58000
+    },
+    {
+      "id": "b8aad7b6-fccc-44d5-bd86-c6a206f5a03a",
+      "text": "asdf",
+      "amount": 2345
+    }
+  ]
+}

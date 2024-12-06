@@ -1,19 +1,22 @@
-
 <script setup lang="ts">
+import type { PropType } from 'vue'
+
 interface Transaction {
   id: string
   text: string
   amount: number
 }
 
-const props = defineProps({
+defineProps({
   transactions: {
-    type: Array as () => Transaction[],
+    type: Array as PropType<Transaction[]>,
     required: true,
   },
 })
 
-const emit = defineEmits(['transactionDeleted'])
+const emit = defineEmits<{
+  (e: 'transactionDeleted', id: string): void
+}>()
 
 const deleteTransaction = (id: string) => {
   emit('transactionDeleted', id)
@@ -35,3 +38,20 @@ const deleteTransaction = (id: string) => {
   </ul>
   <p v-else>Inga transaktioner sparade, lägg till ny transaktion.</p>
 </template>
+
+<style scoped>
+.minus {
+  color: red;
+}
+.plus {
+  color: green;
+}
+.delete-btn {
+  cursor: pointer;
+
+  background: red;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+</style>
