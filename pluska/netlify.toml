@@ -1,0 +1,12 @@
+[build]
+  publish = "dist" # Path to the folder Netlify serves (e.g., "dist" for Vue.js or "build" for React)
+  command = "npm run build" # The build command for your project
+
+[functions]
+  directory = "functions" # Path to serverless functions folder
+  node_bundler = "esbuild" # Optional: specify bundler
+
+[[redirects]]
+  from = "/api/*" # Redirect API requests to your serverless function
+  to = "/.netlify/functions/:splat"
+  status = 200
